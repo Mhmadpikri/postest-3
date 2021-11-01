@@ -1,0 +1,101 @@
+# nama : muhmammad fikri
+# nim  : 2109106010
+# informatika A 21
+
+# contoh program login sederhana
+
+print("""                      selamat datang sobat      
+                    1. Buat akun
+                    2. Login
+                    3. Keluar
+      """)
+username_saya = "ganteng"
+password_saya = "fikri24"
+menu = int(input("Silahkan Pilih Menu : "))
+i = 3
+while i>=1: 
+    if menu == 1 :
+        username = input("Masukkan Username Anda : ")
+        password = input("Masukkan Password Anda : ")
+        akun_baru = [username, password]
+        print("Akun Anda Telah Terdaftar!!!")
+        menu = int(input("Silahkan Pilih Menu : "))
+    elif menu == 2 :
+        username_login = input("masukan username anda :")
+        password_login = input("masukan password :")
+        if username_login == username_saya or username_login == (akun_baru[0]):
+            if password_login == password_saya or password_login == (akun_baru[1]):
+                print ("Anda Telah Login")
+                print ("selamat datang kembali")
+                menu = int(input("Silahkan Pilih Menu : "))
+            else :
+                i -= 1
+                print("password anda salah!, sisa percobaan login anda :", i )
+        else :
+            i-=1
+            
+            
+            
+   # contoh program menu diskon / menu makanan
+   
+   
+   print("||============================================================||")
+print("||========================love cafe===========================||")
+print("||============================================================||")
+print("Daftar menu love cafe")
+print("Makanan")
+print("1. nasi goreng      = Rp. 15.000")
+print("2. mie goreng       = Rp. 15.000")
+print("3. ayam lalapan     = Rp. 20.000")
+print("4. ayam penyet      = Rp. 15.000")
+print("5. kangkung laju    = Rp. 15.000")
+print("Minuman")
+print("1. josua seger      = Rp. 10.000")
+print("2. jus mangga       = Rp. 15.000")
+print("3. jus apel         = Rp. 15.000")
+print("4. jus jeruk        = Rp. 15.000")
+print("5. jus anggur       = RP. 20.000")
+print("||============================================================||")
+print("||============  diskon yang akan di dapatakan   ==============||")
+print("||============================================================||")
+print("diskon 10% jika pembelian 3 minuman")
+print("diskon 5%  jika pembelian 2 makanan")
+print("diskon 5% jika  pembayaran melalui  E-money")
+print("diskon 5% jika weekend")
+print("diskon 10% jika weekdays")
+pesan_makanan = int(input("Silahkan Pilih Menu Makanannya : "))
+jumlah_makanan = int(input("masukkan jumlah pesanan makanan : "))
+harga_makanan = int(input("masukkan jumlah harga : "))
+pesan_minuman = int(input("Silahkan Pilih Menu Minumannya: "))
+jumlah_minuman = int(input("masukkan jumlah pesanan minuman : "))
+harga_minuman = int(input("masukkan jumlah harga : "))
+total_makan = jumlah_makanan * harga_makanan
+total_minum = jumlah_minuman * harga_minuman
+total = total_makan + total_minum
+if jumlah_minuman >= 3 :
+    diskon_minuman = total_minum * (10/100)
+else :
+    diskon_minuman = 0
+if jumlah_makanan >= 2 :
+    diskon_makanan = total_makan * (5/100)
+else :
+    diskon_makanan = 0
+diskon = diskon_makanan + diskon_minuman
+emoney = str(input("masukkan emoney : y/n "))
+if emoney == 'y':
+    diskon_emoney = diskon * (5/100)
+else :
+    diskon_emoney = 0
+weekday = str(input("masukkan weekday: y/n "))
+if weekday =='y':
+    diskon_hari = 10
+else :
+    diskon_hari= 5
+total_diskon = diskon_emoney + diskon_hari
+setelah_diskon = total - total_diskon
+print("Total Pembayaran Anda : RP. ", setelah_diskon)
+            print("password anda salah!, sisa percobaan login anda :", i )
+    else :
+        menu == 3
+        print("Terima Kasih")
+        break
